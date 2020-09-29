@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"go/ast"
 )
 
 func main() {
@@ -24,7 +23,7 @@ func channelNotBuffered() {
 
 	go func() {
 		stringChannels <- "received"
-	}
+	}()
 
 	receiver := <- stringChannels
 
